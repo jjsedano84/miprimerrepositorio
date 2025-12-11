@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web</title>
+    <style>
+        body {
+            background-color: #216f9d;
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        h2 {
+            color: aquamarine;
+            margin-top: 50px;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #0c0000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            background-color: cadetblue;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #120aac;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #118696;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: green;
+            color: black;
+        }
+
+        .Subtitulo {
+            color: rgb(38, 0, 255);
+            background-color: aqua;
+        }
+
+        #SubElementos {
+            color: red;
+            font-size: 20px;
+        }
+
+        nav{
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+
+        }
+
+        nav a:hover{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="recetas.html">recetas</a>
+           </nav>
+    <h1>Ejemplo Portal Web</h1>
+    <p class="Subtitulo">Este documento muestra etiquetas html y css</p>
+
+    <h2 class="Subtitulo">Texto e Imágenes</h2>
+
+    <h2 id="SubElementos">Listas elementos</h2>
+    <ul>
+        <li>Elemento uno</li>
+        <li>Elemento dos</li>
+        <li>Elemento tres</li>
+    </ul>
+
+    <h2>Tabla de productos</h2>
+    <table>
+        <tr>
+            <td>Producto</td>
+            <td>Precio</td>
+        </tr>
+        <tr>
+            <td>Portatil</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>Televisor</td>
+            <td>20000</td>
+        </tr>
+    </table>
+
+    <form onsubmit="return mostrarMensaje()">
+        <div>
+            <label>Nombre:</label>
+            <input id="usuario" type="text" placeholder="Escribe el nombre">
+        </div>
+        <div>
+            <label>Correo:</label>
+            <input type="email">
+        </div>
+        <div>
+            <label>Mensaje:</label>
+            <textarea rows="5" placeholder="Escribe un mensaje"></textarea>
+        </div>
+        <div>
+            <label>telefono:</label>
+            <input type="number">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+
+    
+
+  <p id="Saludo">Hola</p>
+  <p id="SaludoInicial">Hola Como estas</p>
+
+  <h2>Login</h2>
+ <form onsubmit="return validarLogin()">
+<div>
+    <label>Usuario:</label>
+    <input type="text" id="usuarioLogin" >
+</div>
+<div>
+ <label>Contrasena:</label>
+ <input type="password" id="passwordLogin" >
+ <button type="submit">Ingresar</button>
+</div>
+ </form>
+ <p id="mensajeLogin"></p>
+
+<script>
+document.getElementById("Saludo").textContent ="Hola Mundo";
+document.getElementById("SaludoInicial").textContent ="Hola Mundo";
+
+function mostrarMensaje(){
+    const nombre = document.getElementById("usuario").value;
+    const mensaje = document.getElementById("SaludoInicial");
+    if(nombre == ""){
+        mensaje.textContent = "Por favor, ingrese su nombre";
+    } else {
+        mensaje.textContent = "Hola " + nombre + " Gracias por ingresar";
+    }
+
+    return false;
+}
+
+function validarLogin(){
+    const usuarioValido = "admin"
+    const passwordValido = 12345
+
+    const usuario = document.getElementById("usuarioLogin").value;
+    const password = document.getElementById("passwordLogin").value;
+    const mensajeLogin = document.getElementById("mensajeLogin");
+
+    if (usuario === "" || password==="" ){
+        mensajeLogin.textContent = "Por favor complete todos los campos";
+    }
+
+    else if(usuario == usuarioValido && password == passwordValido){
+        mensajeLogin.textContent = "Login exitoso, bienvenido " + usuario;
+         }
+        else{
+            mensajeLogin.textContent = "Usuario o contrasena incorrectos";
+       
+        }
+  return false;
+    }
+
+
+
+</script>
+
+</body>
+</html>
+
+

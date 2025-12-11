@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf6e3;
+            color: #333;
+        }
+
+        .encabezado{
+            background-color: #ff6f61 ;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .encabezado h1{
+            font-size: 3em;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        .seccion-recetas{
+            padding: 40px 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+
+        .tarjeta-receta{
+            background-color: rgba(240, 237, 237, 0.568);
+            width: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid black;
+            padding: 10px;
+
+        }
+
+        .tarjeta-receta img{
+            width:100%;
+            height: 200px;
+            object-fit: cover;
+            
+        }
+
+        .titulo-receta{
+            font-size: 1.5em;
+            color: #ff6f61;
+            margin-top: 10PX;
+        }
+
+        .subtitulo-receta{
+            font-size: 1.1em;
+            color: #3d3231;
+            margin-top: 10PX;
+        }
+
+        .texto-receta{
+            font-size: 0.9em;
+            color: #424141;
+            margin-bottom: 20px;
+        }
+
+        .pie-pagina{
+            background-color: #333;
+            color : white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        .pie-pagina a{
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+         nav{
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+
+        }
+
+        nav a:hover{
+            color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="recetas.html">recetas</a>
+    </nav>
+    <header class="encabezado">
+        <h1>Delicias de tu Cocina</h1>
+        <img src="img/1.jpg" alt="Comida deliciosa">
+    </header>
+
+    <section class="seccion-recetas">
+        <div class="tarjeta-receta">
+            <img src="img/2.jpg" alt="Hamburguesa">
+            <h2 class="titulo-receta">Hamburguesa</h2>
+            <h3 class="subtitulo-receta">Ingredientes:</h3>
+            <p class="texto-receta">Pan de Hamburguesa, Carne de res, lechuga, tomate, queso, salsas</p>
+            <h3 class="subtitulo-receta">Instrucciones:</h3>
+            <p class="texto-receta">Formar la carne en Hamburguesa, coinar a la plancha, armar el pana con todos los ingredientes, etc</p>
+        </div>
+
+
+        <div class="tarjeta-receta">
+            <img src="img/3.jpg" alt="Ajiaco">
+            <h2 class="titulo-receta">Ajiaco</h2>
+            <h3 class="subtitulo-receta">Ingredientes:</h3>
+            <p class="texto-receta">Pollo, papas, mazorca, sal, etc</p>
+            <h3 class="subtitulo-receta">Instrucciones:</h3>
+            <p class="texto-receta">Cocinar el pollo con las papas, agregar condimentos, dejar hervir</p>
+        </div>
+
+        <div class="tarjeta-receta">
+            <img src="img/4.jpg" alt="Arroz con Pollo">
+            <h2 class="titulo-receta">Arroz Con Pollo</h2>
+            <h3 class="subtitulo-receta">Ingredientes:</h3>
+           
+            <p class="texto-receta">Arroz, Pollo, verduras, sal</p>
+            <h3 class="subtitulo-receta">Instrucciones:</h3>         
+            <p class="texto-receta">Cocinar el pollo y las verduras , etc</p>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        &copy; 2025 Delicias en tu cocina, todos los derechos reservados <a href="index.html">Contacto</a>
+    </footer>
+
+</body>
+</html>
